@@ -16,7 +16,10 @@ var data = [
   {date: "2001-11-19", permits: 0, producing wells completed: 0, dry holes: 0, confidential well plugged or producing: 1, temporarily abandoned: 0, producer abandoned: 0},
   {date: "2001-11-20", permits: 1, producing wells completed: 0, dry holes: 0, confidential well plugged or producing: 1, temporarily abandoned: 0, producer abandoned: 0},
   {date: "2001-11-21", permits: 1, producing wells completed: 0, dry holes: 0, confidential well plugged or producing: 0, temporarily abandoned: 5, producer abandoned: 0},
-  {date: "2000-11-15", permits: 2, producing wells completed: 4, dry holes: 0, confidential well plugged or producing: 1, temporarily abandoned: 0, producer abandoned: 0},
-  {date: "2000-11-16", permits: 5, producing wells completed: 0, dry holes: 0, confidential well plugged or producing: 0, temporarily abandoned: 1, producer abandoned: 0},
-  {date: "2000-11-17", permits: 1, producing wells completed: 0, dry holes: 0, confidential well plugged or producing: 1, temporarily abandoned: 0, producer abandoned: 0},
 ]; 
+
+var rigs = crossfilter(data);
+var permitsDim = rigs.dimension(function(d) { return d.permits; });   
+var permits_>2 = permitsDim.filter(>2);
+print_filter("permits_>2"); 
+
